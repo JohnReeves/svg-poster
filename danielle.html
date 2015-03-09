@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Danielles Poster</title>
+
+
+    <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body style="background-color:#212121;">
+
+    <div class="container">
+
+      <p>&nbsp;</p>
+      <div class="row">
+
+        <p><a href="#" class="btn btn-primary">Animate</a></p>
+
+        <svg height="600" width="600">
+
+
+          <text id="lblSun" x="270" y="250" fill="#e9e9e9" font-size="2em" opacity="0.0">Sun</text>
+          <circle cx="300" cy="300" r="40" fill="#ffcd00" id="sun"/>
+
+          <text id="lblMercury" x="180" y="270" fill="#e9e9e9" font-size="1em" opacity="0.0">Mercury</text>
+          <circle cx="200" cy="300" r="10" fill="#F9A825" id="mercury"/>
+
+          <text id="lblVenus" x="130" y="270" fill="#e9e9e9" font-size="1em" opacity="0.0">Venus</text>
+          <circle cx="150" cy="300" r="15" fill="#0288D1" id="venus"/>
+
+          <text id="lblEarth" x="80" y="270" fill="#e9e9e9" font-size="1em" opacity="0.0">Earth</text>
+          <circle cx="100" cy="300" r="15" fill="#7CB342" id="earth"/>
+
+          <text id="lblMars" x="30" y="270" fill="#e9e9e9" font-size="1em" opacity="0.0">Mars</text>
+          <circle cx="50" cy="300" r="10" fill="#C62828" id="mars"/>
+
+
+
+
+
+        </svg>
+
+
+      </div>
+
+
+
+
+  </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+    <script>
+
+
+    //SUN
+      var sun = $("#sun");
+      var lblSun = $("#lblSun");
+
+      var mercury = $("#mercury");
+      var lblMercury = $("#lblMercury");
+
+      var venus = $("#venus");
+      var lblVenus = $("#lblVenus");
+
+      var earth = $("#earth");
+      var lblEarth = $("#lblEarth");
+
+      var mars = $("#mars");
+      var lblMars = $("#lblMars");
+
+      setUpPlanet(sun, lblSun);
+      setUpPlanet(mercury, lblMercury);
+      setUpPlanet(venus, lblVenus);
+      setUpPlanet(earth, lblEarth);
+      setUpPlanet(mars, lblMars);
+
+
+
+      function setUpPlanet(planet, lbl){
+
+
+        planet.mouseenter( function(){
+          lbl.attr("opacity", "1.0");
+        } ).mouseleave( function(){
+          lbl.attr("opacity", "0.0");
+        } );
+
+      }
+
+    </script>
+
+
+  </body>
+</html>
